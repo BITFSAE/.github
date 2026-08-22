@@ -22,8 +22,8 @@
 BITFSAE (Organization)
 ├── rookie (新入队队员预备组)
 ├── electrical (电控与硬件组)
-│   ├── electrical-core (核心开发组)
-│   └── electrical-junior (预备与日常维护组)
+│   ├── electrical-core (主力 member组)
+│   └── electrical-junior (预备 member组)
 ├── vehicle-dynamics (车辆动力学与整车控制组)
 └── operations (运营与信息化运维组)
 ```
@@ -32,30 +32,31 @@ BITFSAE (Organization)
 
 ## 核心仓库资产列表
 
-### 1. 电控固件与低压系统
-| 仓库 | 说明 | 核心主控 / 芯片 | 可见性 |
-|---|---|---|---|
-| [`BMS-MASTER-F405`](https://github.com/BITFSAE/BMS-MASTER-F405) | 现役 BMS 电池管理系统主控固件 | STM32F405RGT6 | Private |
-| [`BMS-SLAVE`](https://github.com/BITFSAE/BMS-SLAVE) | BMS 从控与单体电压/温度采集固件 | STM32F103 + LTC6804-1 | Private |
-| [`BMS_MASTER`](https://github.com/BITFSAE/BMS_MASTER) | 早期 STM32F105 BMS 主控固件（历史归档） | STM32F105 | Private |
-| [`CANRS485_G473`](https://github.com/BITFSAE/CANRS485_G473) | 四路车载 CAN 转 RS485 遥测网关 | STM32G473 | Public |
-| [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485) | 双路 CAN 转 RS485/DTU 遥测转接固件 | STM32F405 | Public |
-| [`PDM`](https://github.com/BITFSAE/PDM) | 低压配电与电能监测模块固件 | STM32F103 + INA226 | Private |
-| [`FanController`](https://github.com/BITFSAE/FanController) | 水冷/风冷散热风扇 CAN 控制固件 | STM32F103 | Private |
-| [`SerialFlash`](https://github.com/BITFSAE/SerialFlash) | STM32 串口 Bootloader 烧录工具 | Node.js / Web / CLI | Private |
+### 1. 电控固件
 
-### 2. 硬件与电路设计
+| 仓库                                                              | 说明                           | 核心主控 / 芯片             |
+| --------------------------------------------------------------- | ---------------------------- | --------------------- |
+| [`BMS-MASTER-F405`](https://github.com/BITFSAE/BMS-MASTER-F405) | 现役 BMS 电池管理系统主控固件            | STM32F405RGT6         |
+| [`BMS-SLAVE`](https://github.com/BITFSAE/BMS-SLAVE)             | BMS 从控与单体电压/温度采集固件           | STM32F103 + LTC6804-1 |
+| [`BMS_MASTER`](https://github.com/BITFSAE/BMS_MASTER)           | 早期 STM32F105 BMS 主控固件（历史归档）  | STM32F105             |
+| [`CANRS485_G473`](https://github.com/BITFSAE/CANRS485_G473)     | 四路车载 CAN 转 RS485 遥测网关        | STM32G473             |
+| [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485)             | 早期 双路 CAN 转 RS485/DTU 遥测转接固件 | STM32F405             |
+| [`PDM`](https://github.com/BITFSAE/PDM)                         | 低压配电与电能监测模块固件                | STM32F103 + INA226    |
+| [`FanController`](https://github.com/BITFSAE/FanController)     | 水冷/风冷散热风扇 CAN 控制固件           | STM32F103             |
+| [`SerialFlash`](https://github.com/BITFSAE/SerialFlash)         | STM32 串口 Bootloader 烧录工具     | Node.js / Web / CLI   |
+
+### 2. 硬件存档与电路设计
 | 仓库 | 说明 | 格式 / 工具 | 可见性 |
 |---|---|---|---|
 | [`Hardware`](https://github.com/BITFSAE/Hardware) | 全车 PCB 工程汇总归档（25E / 26E） | 嘉立创 EDA (`.epro2` / `.epro`) | Private |
 | [`fsae-hv-indicator`](https://github.com/BITFSAE/fsae-hv-indicator) | 电池箱高压指示灯（TSAL/HV Indicator）硬件电路设计 | 嘉立创 EDA / 开放设计 | Public |
 
 ### 3. 通信契约与跨组协同
-| 仓库 | 说明 | 协同 Team | 可见性 |
-|---|---|---|---|
+| 仓库                                                                    | 说明                               | 协同 Team                            | 可见性    |
+| --------------------------------------------------------------------- | -------------------------------- | ---------------------------------- | ------ |
 | [`vehicle-interfaces`](https://github.com/BITFSAE/vehicle-interfaces) | 整车 CAN DBC 与遥测 Protobuf 协议唯一权威定义 | `electrical`<br>`vehicle-dynamics` | Public |
 
-### 4. 知识库与技术文档
+### 4. 技术文档
 | 仓库 | 说明 | 维护 Team | 可见性 |
 |---|---|---|---|
 | [`electrical-docs`](https://github.com/BITFSAE/electrical-docs) | 电气与硬件技术文档、调试记录与比赛交检知识库 | `electrical` | Private |

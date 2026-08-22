@@ -39,21 +39,30 @@ git config --global user.name "Your Name"
 git config --global user.email "your_email@example.com"
 ```
 
-### 1.4 配置 SSH 密钥
-车队统一推荐使用 SSH 协议进行代码克隆与推送：
+### 1.4 配置 SSH 密钥（推荐使用 GitHub CLI 一键自动完成）
+车队统一使用 SSH 协议进行代码克隆与推送。配置方式分为自动与手动两种：
 
-1. **生成 SSH 密钥对**（如已有则跳过）：
+#### 方式一：使用 GitHub CLI 自动配置（推荐）
+若已安装 `gh`（参考 [`github cli使用说明.md`](https://github.com/BITFSAE/electrical-docs/blob/main/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/github%20cli%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)），在终端执行：
+
+```bash
+gh auth login
+```
+按照终端提示交互选择：
+1. **What account do you want to log into?** -> `GitHub.com`
+2. **What is your preferred protocol for Git operations on this host?** -> `SSH`
+3. **Upload your SSH public key / Generate a new SSH key?** -> 回车确认（`gh` 会自动识别已有公钥或在本地生成新密钥并直接上传至 GitHub 账号，无需手动复制粘贴）
+4. **How would you like to authenticate GitHub CLI?** -> `Login with a web browser`，在弹出的浏览器页面输入终端给出的 8 位验证码即可完成。
+
+#### 方式二：手动生成与配置（备选）
+若未安装 `gh`，可通过系统命令手动完成：
+1. **生成 SSH 密钥对**：
    ```bash
    ssh-keygen -t ed25519 -C "your_email@example.com"
-   # 按回车使用默认路径即可
+   # 一路回车使用默认路径即可
    ```
-2. **复制公钥内容**：
-   - macOS: `pbcopy < ~/.ssh/id_ed25519.pub`
-   - Linux: `cat ~/.ssh/id_ed25519.pub`
-   - Windows (Git Bash): `clip < ~/.ssh/id_ed25519.pub`
-3. **添加至 GitHub**：
-   - 打开 GitHub [SSH and GPG keys](https://github.com/settings/keys)。
-   - 点击 **New SSH key**，Title 填写设备名称，将公钥粘贴到 Key 栏并保存。
+2. **复制公钥内容**（`~/.ssh/id_ed25519.pub`）。
+3. **添加至 GitHub**：打开 GitHub [SSH and GPG keys](https://github.com/settings/keys)，点击 **New SSH key** 粘贴并保存。
 4. **验证连接**：
    ```bash
    ssh -T git@github.com
