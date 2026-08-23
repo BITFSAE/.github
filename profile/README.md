@@ -44,13 +44,12 @@ BITFSAE (Organization)
 | [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485)             | 早期 双路 CAN 转 RS485/DTU 遥测转接固件 | STM32F405             | Private         |
 | [`PDM`](https://github.com/BITFSAE/PDM)                         | 低压配电与电能监测模块固件                | STM32F103 + INA226    | Private         |
 | [`FanController`](https://github.com/BITFSAE/FanController)     | 水冷/风冷散热风扇 CAN 控制固件           | STM32F103             | Private         |
-| [`SerialFlash`](https://github.com/BITFSAE/SerialFlash)         | STM32 串口 Bootloader 烧录工具（开源） | Node.js / Web / CLI   | **Public（开源）**  |
 
 ### 2. 硬件存档与电路设计
-| 仓库 | 说明 | 格式 / 工具 | 可见性 |
-|---|---|---|---|
-| [`Hardware`](https://github.com/BITFSAE/Hardware) | 全车 PCB 工程汇总归档（25E / 26E） | 嘉立创 EDA (`.epro2` / `.epro`) | Private |
-| [`fsae-hv-indicator`](https://github.com/BITFSAE/fsae-hv-indicator) | 电池箱高压指示灯（TSAL/HV Indicator）硬件电路设计 | 嘉立创 EDA / 开放设计 | Public |
+| 仓库                                                                  | 说明                                | 格式 / 工具            | 可见性     |
+| ------------------------------------------------------------------- | --------------------------------- | ------------------ | ------- |
+| [`Hardware`](https://github.com/BITFSAE/Hardware)                   | 全车 PCB 工程汇总归档（25E / 26E）          | 嘉立创 EDA (`.epro2`） | Private |
+| [`fsae-hv-indicator`](https://github.com/BITFSAE/fsae-hv-indicator) | 电池箱高压指示灯（TSAL/HV Indicator）硬件电路设计 | 嘉立创 EDA / 开放设计     | Public  |
 
 ### 3. 通信契约与跨组协同
 | 仓库                                                                    | 说明                               | 协同 Team                            | 可见性    |
