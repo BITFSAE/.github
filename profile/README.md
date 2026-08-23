@@ -10,7 +10,8 @@
 新加入车队的成员请首先查阅以下文档完成账号配置与权限申请：
 
 - [《BITFSAE GitHub 组织新成员指南与协作手册》](./docs/NEW_MEMBER_GUIDE.md)：涵盖环境准备（SSH/2FA）、组织权限继承、推荐开发工作流与注意事项。
-- [《Git 日常协作与常用操作说明》](./docs/GIT_WORKFLOW_CHEATSHEET.md)：日常 Git 分支管理、同步与提交操作说明。
+- [《Git 日常协作与常用操作说明》](./docs/GIT_WORKFLOW_CHEATSHEET.md)：日常 Git 分支管理、同步提交、撤销操作与 VS Code 图形界面对照。
+- [《GitHub CLI 安装与使用指南》](./docs/GITHUB_CLI_GUIDE.md)：`gh` 安装、SSH 一键配置与 PR / Issue 常用命令。
 
 ---
 
@@ -34,16 +35,16 @@ BITFSAE (Organization)
 
 ### 1. 电控固件
 
-| 仓库                                                              | 说明                           | 核心主控 / 芯片             |
-| --------------------------------------------------------------- | ---------------------------- | --------------------- |
-| [`BMS-MASTER-F405`](https://github.com/BITFSAE/BMS-MASTER-F405) | 现役 BMS 电池管理系统主控固件            | STM32F405RGT6         |
-| [`BMS-SLAVE`](https://github.com/BITFSAE/BMS-SLAVE)             | BMS 从控与单体电压/温度采集固件           | STM32F103 + LTC6804-1 |
-| [`BMS_MASTER`](https://github.com/BITFSAE/BMS_MASTER)           | 早期 STM32F105 BMS 主控固件（历史归档）  | STM32F105             |
-| [`CANRS485_G473`](https://github.com/BITFSAE/CANRS485_G473)     | 四路车载 CAN 转 RS485 遥测网关        | STM32G473             |
-| [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485)             | 早期 双路 CAN 转 RS485/DTU 遥测转接固件 | STM32F405             |
-| [`PDM`](https://github.com/BITFSAE/PDM)                         | 低压配电与电能监测模块固件                | STM32F103 + INA226    |
-| [`FanController`](https://github.com/BITFSAE/FanController)     | 水冷/风冷散热风扇 CAN 控制固件           | STM32F103             |
-| [`SerialFlash`](https://github.com/BITFSAE/SerialFlash)         | STM32 串口 Bootloader 烧录工具     | Node.js / Web / CLI   |
+| 仓库                                                              | 说明                           | 核心主控 / 芯片             | 可见性             |
+| --------------------------------------------------------------- | ---------------------------- | --------------------- | --------------- |
+| [`BMS-MASTER-F405`](https://github.com/BITFSAE/BMS-MASTER-F405) | 现役 BMS 电池管理系统主控固件            | STM32F405RGT6         | Private         |
+| [`BMS-SLAVE`](https://github.com/BITFSAE/BMS-SLAVE)             | BMS 从控与单体电压/温度采集固件           | STM32F103 + LTC6804-1 | Private         |
+| [`BMS_MASTER`](https://github.com/BITFSAE/BMS_MASTER)           | 早期 STM32F105 BMS 主控固件（历史归档）  | STM32F105             | Private         |
+| [`CANRS485_G473`](https://github.com/BITFSAE/CANRS485_G473)     | 四路车载 CAN 转 RS485 遥测网关        | STM32G473             | Private         |
+| [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485)             | 早期 双路 CAN 转 RS485/DTU 遥测转接固件 | STM32F405             | Private         |
+| [`PDM`](https://github.com/BITFSAE/PDM)                         | 低压配电与电能监测模块固件                | STM32F103 + INA226    | Private         |
+| [`FanController`](https://github.com/BITFSAE/FanController)     | 水冷/风冷散热风扇 CAN 控制固件           | STM32F103             | Private         |
+| [`SerialFlash`](https://github.com/BITFSAE/SerialFlash)         | STM32 串口 Bootloader 烧录工具（开源） | Node.js / Web / CLI   | **Public（开源）**  |
 
 ### 2. 硬件存档与电路设计
 | 仓库 | 说明 | 格式 / 工具 | 可见性 |

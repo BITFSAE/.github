@@ -22,7 +22,7 @@
 
 ### 1.1 修改 GitHub 个人资料姓名
 - 进入 GitHub [Profile Settings](https://github.com/settings/profile)。
-- 在 **Name** 项中填写**真实中文姓名**或**姓名全拼**（例如 `武理博` 或 `Libo Wu`）。
+- 在 **Name** 项中填写**真实中文姓名**或**姓名全拼**（例如 `李二毛` 或 `Ermao Li`）。
 - 目的：便于在 Pull Request 审查、任务指派和代码提交记录中准确识别成员。
 
 ### 1.2 开启 2FA 两步验证
@@ -43,7 +43,7 @@ git config --global user.email "your_email@example.com"
 车队统一使用 SSH 协议进行代码克隆与推送。配置方式分为自动与手动两种：
 
 #### 方式一：使用 GitHub CLI 自动配置（推荐）
-若已安装 `gh`（参考 [`github cli使用说明.md`](https://github.com/BITFSAE/electrical-docs/blob/main/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/github%20cli%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)），在终端执行：
+若已安装 `gh`（多平台安装方法见 [《GitHub CLI 安装与使用指南》](./GITHUB_CLI_GUIDE.md)），在终端执行：
 
 ```bash
 gh auth login
@@ -175,7 +175,6 @@ git branch -d feat/precharge-timeout
 
 ### 4.4 文档撰写规范
 - 技术文档使用客观平实的工程语言，记录实际参数、测量值与验证步骤。
-- 严禁直接复制粘贴未经提炼的 AI 原始对话文本。
 
 ---
 
@@ -215,14 +214,9 @@ git branch -d feat/precharge-timeout
 
 ## 7. 仓库速查列表
 
-| 仓库 | 用途 | 适用环境 / 工具 |
-|---|---|---|
-| [`BMS-MASTER-F405`](https://github.com/BITFSAE/BMS-MASTER-F405) | BMS 主控固件 | STM32CubeIDE / Keil MDK |
-| [`BMS-SLAVE`](https://github.com/BITFSAE/BMS-SLAVE) | BMS 从控采集固件 | Keil MDK / STM32CubeMX |
-| [`CANRS485_G473`](https://github.com/BITFSAE/CANRS485_G473) | 四路 CAN 遥测网关 | STM32CubeIDE / PlatformIO |
-| [`vehicle-interfaces`](https://github.com/BITFSAE/vehicle-interfaces) | 整车 CAN 协议与 DBC | VS Code / Python / DBC Tools |
-| [`Hardware`](https://github.com/BITFSAE/Hardware) | 嘉立创 PCB 工程归档 | 嘉立创 EDA 专业版 |
-| [`electrical-docs`](https://github.com/BITFSAE/electrical-docs) | 电气组技术文档库 | Obsidian / Markdown 编辑器 |
-| [`operations-docs`](https://github.com/BITFSAE/operations-docs) | 运营组文档与视觉资产 | Obsidian / Markdown 编辑器 |
-| [`bitfsae-com`](https://github.com/BITFSAE/bitfsae-com) | 官方网站代码库 | Node.js 20+ / pnpm / VS Code |
-| [`bitfsae-skills`](https://github.com/BITFSAE/bitfsae-skills) | 车队 AI Agent 技能库 | AI 开发环境 |
+组织全部仓库的用途、可见性与维护 Team 以组织主页的[核心仓库资产列表](https://github.com/BITFSAE)为准，本文不再重复维护。常用入口：
+
+- 组织仓库总览：<https://github.com/orgs/BITFSAE/repositories>
+- 整车通信协议唯一权威源：[`BITFSAE/vehicle-interfaces`](https://github.com/BITFSAE/vehicle-interfaces)
+- 车队 AI 技能库：[`BITFSAE/bitfsae-skills`](https://github.com/BITFSAE/bitfsae-skills)
+

@@ -5,8 +5,9 @@
 ## 仓库内容结构
 
 - **`profile/README.md`**：组织主页门面，展示在 `https://github.com/BITFSAE` 首页。
-- **`docs/NEW_MEMBER_GUIDE.md`**：车队新队员 GitHub 组织上手与开发协作规范手册。
-- **`docs/GIT_WORKFLOW_CHEATSHEET.md`**：日常 Git 命令速查与各技术栈标准 `.gitignore` 模板。
+- **`profile/docs/NEW_MEMBER_GUIDE.md`**：车队新队员 GitHub 组织上手与开发协作规范手册。
+- **`profile/docs/GIT_WORKFLOW_CHEATSHEET.md`**：日常 Git 命令速查、首次配置克隆与 VS Code 图形界面对照。
+- **`profile/docs/GITHUB_CLI_GUIDE.md`**：GitHub CLI（`gh`）安装、SSH 一键配置与 PR / Issue 常用命令指南。
 - **`.github/PULL_REQUEST_TEMPLATE.md`**：组织默认 Pull Request 审查模板。
 
 ## 维护原则
