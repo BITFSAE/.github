@@ -1,4 +1,4 @@
-# <img src="https://img.bitfsae.com/img/20260822231421897.png" height="32" style="vertical-align: middle; margin-right: 8px;" /> 北京理工大学方程式赛车队 (BITFSAE)
+# 北京理工大学纯电动方程式赛车队 (BITFSAE)
 
 > **Beijing Institute of Technology Formula SAE Team**  
 > 本组织为车队电控固件、硬件设计、通信契约、技术文档与信息化平台的集中代码与知识资产库。
@@ -44,6 +44,9 @@ BITFSAE (Organization)
 | [`CAN2RS485`](https://github.com/BITFSAE/CAN2RS485)             | 双路 CAN 转 RS485/DTU 遥测转接固件   | STM32F405             | Private |
 | [`PDM`](https://github.com/BITFSAE/PDM)                         | 低压配电与电能监测模块固件               | STM32F103 + INA226    | Private |
 | [`FanController`](https://github.com/BITFSAE/FanController)     | 水冷/风冷散热风扇 CAN 控制固件          | STM32F103             | Private |
+| [`HMI_Display`](https://github.com/BITFSAE/HMI_Display)         | 车手屏固件（LVGL，800×480 显示 CANB / GNSS 数据）及 PC / macOS 模拟器 | STM32F407ZET6         | Private |
+| [`Steering_wheel`](https://github.com/BITFSAE/Steering_wheel)   | 方向盘按钮板固件（旋钮 / 电位器 / 按键经 CAN 发往车手屏） | STM32F103C8T6         | Public  |
+| [`data_collection_inte`](https://github.com/BITFSAE/data_collection_inte) | 蔬菜盒子 v2 数据采集集成系统：固件与硬件工程（CAN / 胎温 / 4G 遥测） | STM32F407ZET6         | Public  |
 
 ### 2. 硬件存档与电路设计
 | 仓库                                                                  | 说明                                | 格式 / 工具            | 可见性     |
@@ -54,13 +57,14 @@ BITFSAE (Organization)
 ### 3. 通信契约与跨组协同
 | 仓库                                                                    | 说明                               | 协同 Team                            | 可见性    |
 | --------------------------------------------------------------------- | -------------------------------- | ---------------------------------- | ------ |
-| [`vehicle-interfaces`](https://github.com/BITFSAE/vehicle-interfaces) | 整车 CAN DBC 与遥测 Protobuf 协议唯一权威定义 | `electrical`<br>`vehicle-dynamics` | Public |
+| [`vehicle-interfaces`](https://github.com/BITFSAE/vehicle-interfaces) | 整车 CAN DBC 与遥测 Protobuf 协议唯一权威定义 | `electrical`<br>`vehicle-dynamics` | Private |
 
 ### 4. 技术文档
 | 仓库 | 说明 | 维护 Team | 可见性 |
 |---|---|---|---|
 | [`electrical-docs`](https://github.com/BITFSAE/electrical-docs) | 电气与硬件技术文档、调试记录与比赛交检知识库 | `electrical` | Private |
 | [`operations-docs`](https://github.com/BITFSAE/operations-docs) | 运营组交接资料、服务器运维手册与品牌视觉资产 | `operations` | Private |
+| [`ESF`](https://github.com/BITFSAE/ESF) | ESF（电气安全检查表）申报文档、器件规格书与图纸归档 | `electrical-core`<br>`electrical-junior` | Private |
 
 ### 5. 门户网站与运维部署
 | 仓库 | 说明 | 技术栈 | 可见性 |
