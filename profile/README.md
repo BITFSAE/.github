@@ -80,6 +80,9 @@ BITFSAE (Organization)
 | [`excel-migrator`](https://github.com/BITFSAE/excel-migrator) | 跨赛季 Excel 表格（如 ESF 申报表）数据自动迁移工具 | Python CLI | Public |
 | [`bitfsae-skills`](https://github.com/BITFSAE/bitfsae-skills) | 面向车队工程与 AI Agent 的自动化工作流技能库（推荐安装至个人 AI 工具） | Markdown / Python | Public |
 | [`can-host`](https://github.com/BITFSAE/can-host) | 车队 CAN 上位机：BMS 监视 + 整车 CANB 遥测（SOP/IVT/PDM/风扇/ECU/胎温） | Python | Public |
+| [`OpenLap-SiverShark`](https://github.com/BITFSAE/OpenLap-SiverShark) | 赛车视频与遥测叠加工具：Vector BLF / DBC 解码、信号选择、关键帧对齐与 Overlay 视频导出 | Python / 桌面应用；测试与比赛视频复盘 | Public |
+
+OpenLap 使用文档：[中文使用说明](https://github.com/BITFSAE/OpenLap-SiverShark/blob/main/README.zh-CN.md)涵盖素材载入、BLF 通道与 DBC 绑定、Signal 选择、视频与遥测关键帧对齐、叠加层编辑及导出；[Releases](https://github.com/BITFSAE/OpenLap-SiverShark/releases) 提供已发布的安装包与便携版。
 
 ### 7. 车辆动力学与算法仿真
 
