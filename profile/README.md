@@ -81,6 +81,12 @@ BITFSAE (Organization)
 | [`bitfsae-skills`](https://github.com/BITFSAE/bitfsae-skills) | 面向车队工程与 AI Agent 的自动化工作流技能库（推荐安装至个人 AI 工具） | Markdown / Python | Public |
 | [`can-host`](https://github.com/BITFSAE/can-host) | 车队 CAN 上位机：BMS 监视 + 整车 CANB 遥测（SOP/IVT/PDM/风扇/ECU/胎温） | Python | Public |
 
+### 7. 车辆动力学与算法仿真
+
+| 仓库 | 说明 | 仿真环境 | 可见性 |
+|---|---|---|---|
+| [`CarSim_for_Silvershark`](https://github.com/BITFSAE/CarSim_for_Silvershark) | 用于车辆控制算法逻辑的初步验证，通过联合仿真检查算法流程、信号接口与基本响应，为后续调试和迭代提供依据 | MATLAB / Simulink + CarSim | Private |
+
 ---
 
 ## 核心协作原则
